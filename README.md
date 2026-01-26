@@ -22,24 +22,29 @@ Each notebook includes **visualizations** of training results for clarity.
 ## ⚙️ Requirements
 - Python 3.x  
 - Jupyter Notebook or Google Colaboratory  
-- Libraries: `numpy`, `matplotlib`, `scikit-learn`, `tensorflow` (for some exercises)  
+- Libraries:
+   - `numpy`
+   - `matplotlib`
+   - `scikit-learn`
+   - `scikit-learn` (in some exercises)
+   - `tensorflow` (for some exercises)
+
+⚠️ **Note**: These notebooks were created during university coursework. Dependencies may vary between files, and not all notebooks have been tested recently.
 
 ---
 
 ## 🚀 Usage
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/SemyonKim/Neural-Network-Exercises.git
-   ```
-1. Open a notebook in Jupyter or Google Colab.
-1. Run the cells to explore the algorithm and visualize results.
+- This repository is an **archive of my university exercises**.
+- Each .ipynb notebook demonstrates a specific algorithm or neural network concept.
+- You are welcome to open the notebooks in **Jupyter** or **Google Colab** to explore the code and visualizations.
+- Since this is an archive, some notebooks may require adjustments to run correctly in modern environments.
 
 ---
 
 ## 📌 Notes
-- This project is an academic exercise archive.
-- It is not actively maintained, but preserved for reference and learning.
-- Future updates may include documentation of my Bachelor/Master thesis experiments.
+- This project is an **academic exercise archive**.
+- It is **not actively maintained**, but preserved for reference and learning.
+- Future updates may include documentation of my **Bachelor/Master thesis experiments**.
 
 ---
 
