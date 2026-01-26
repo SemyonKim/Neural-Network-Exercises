@@ -5,9 +5,8 @@
 ![Platform: Jupyter/Colab](https://img.shields.io/badge/Platform-Jupyter%20%2F%20Colab-orange?style=for-the-badge&logo=googlecolab)
 
 ## 📖 Overview
-This repository is an **archived collection** of my university coursework in neural networks implemented in **Python notebooks**.  
+This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**.  
 Exercises range from **basic concepts** (perceptron, activation functions) to **medium-level implementations** (multi-layer networks, backpropagation, convolutional examples).  
-Each notebook includes **visualizations** of training results for clarity.
 
 ---
 
@@ -50,12 +49,11 @@ Each notebook includes **visualizations** of training results for clarity.
    - Core: `numpy`, `matplotlib`
    - ML/NN: `scikit-learn`, `tensorflow`
 
-⚠️ **Note**: These notebooks were created during university coursework. Dependencies may vary between files, and not all notebooks have been tested recently.
+> ⚠️ **Note**: These notebooks were created during university coursework. Dependencies may vary between files, and not all notebooks have been tested recently.
 
 ---
 
 ## 🚀 Usage
-- This repository is an **archive of my university exercises**.
 - Each .ipynb notebook demonstrates a specific algorithm or neural network concept.
 - You are welcome to open the notebooks in **Jupyter** or **Google Colab** to explore the code and visualizations.
 - Since this is an archive, some notebooks may require adjustments to run correctly in modern environments.
