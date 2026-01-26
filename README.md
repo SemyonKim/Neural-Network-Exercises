@@ -31,6 +31,8 @@ Each notebook includes **visualizations** of training results for clarity.
   *Problem solved:* Shows feature engineering and manual classification logic, achieving ~29% accuracy.
 
 ### Medium Level
+- **[iou_and_polygon_area.ipynb](medium/iou_and_polygon_area.ipynb)** Demonstrates geometric computations: Intersection over Union (IoU) between rectangles and polygon area calculation using Shapely.
+*Problem solved:* Introduces bounding box overlap metrics (IoU) widely used in computer vision, and shows how to compute polygon areas programmatically.
 - *(to be added: multi-layer networks, backpropagation, convolutional examples)*
 
 ### Visualization
