@@ -24,12 +24,18 @@ This repository is an **archived collection** of selected works from my universi
     - **Part1/** → 8 seminars + 2 competitions covering fundamentals: Python basics, data preprocessing, linear/logistic regression, decision trees, and early ML challenges.
     - **Part2/** → 8 seminars (including 1 competition) focused on applied ML: feature engineering, ensemble methods, PyTorch models, image classification with augmentation, and advanced regression tasks.
     - **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)** → consolidated notebook combining all seminars and competitions into one file for quick review.
+- **BachelorWork/** → complete implementation of my Bachelor thesis project on synthetic license plate generation and recognition.
+    - **[create_train_data.py](BachelorWork/Code/Plate_Generator/create_train_data.py)** and **[genplate_advanced.py](BachelorWork/Code/Plate_Generator/genplate_advanced.py)** → synthetic license plate generator.
+    - **[PlateCommon.py](BachelorWork/Code/Plate_Generator/PlateCommon.py)** → image distortion functions (rotation, smudging, noise).
+    - **[train.py](BachelorWork/Code/CNN_model/train.py)** → CNN training pipeline with custom NormLayer.
+    - **[test.py](BachelorWork/Code/CNN_model/test.py)** → evaluation and prediction script.
+    - **[GW_Kim_Semyon.pdf](BachelorWork/GW_Kim_Semyon.pdf)** → full thesis document.
 
 ---
 
 ## 📂 Contents
 
-### Basic Level
+### 🟢 Basic Level
 - **[digit_recognition_constant.ipynb](basic/digit_recognition_constant.ipynb)**  
   Trivial baseline classifier that always predicts the same digit.  
   *Problem solved:* Demonstrates dataset loading and evaluation pipeline, even though accuracy is ~10%.
@@ -38,19 +44,19 @@ This repository is an **archived collection** of selected works from my universi
   Rule-based classifier dividing digit images into quadrants and comparing pixel counts.  
   *Problem solved:* Shows feature engineering and manual classification logic, achieving ~29% accuracy.
 
-### Medium Level
+### 🟡 Medium Level
 - **[iou_and_polygon_area.ipynb](medium/iou_and_polygon_area.ipynb)**  
   Demonstrates geometric computations: Intersection over Union (IoU) between rectangles and polygon area calculation using Shapely.
 *Problem solved:* Introduces bounding box overlap metrics (IoU) widely used in computer vision, and shows how to compute polygon areas programmatically.
 - *(to be added: multi-layer networks, backpropagation, convolutional examples)*
 
-### Visualization
+### 📊 Visualization
 - *(to be added: training curves, accuracy plots)*
 
-### Utilities
+### 🛠️ Utilities
 - *(to be added: helper functions for reuse)*
 
-### PythonMLCourse ([SHARE](https://sharemsu.ru/) Program)
+### 📘 PythonMLCourse ([SHARE](https://sharemsu.ru/) Program)
 
 #### Combined Notebook
 - **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)**
@@ -106,6 +112,23 @@ This repository is an **archived collection** of selected works from my universi
 - **Seminar08**
     - Problem: Regression with feature engineering.
     - Solution: Applied ensemble methods and optimized performance.
+ 
+### 🎓 Bachelor Thesis Project
+- **[create_train_data.py](BachelorWork/Code/Plate_Generator/create_train_data.py)** and **[genplate_advanced.py](BachelorWork/Code/Plate_Generator/genplate_advanced.py)**  
+  Generates synthetic license plate images using PIL and OpenCV.
+Problem solved: Creates realistic training data for end-to-end recognition.
+- **[PlateCommon.py](BachelorWork/Code/Plate_Generator/PlateCommon.py)**  
+  Implements image transformations: rotation, smudging, Gaussian blur, and noise injection.
+Problem solved: Simulates real-world distortions to improve model robustness.
+- **[train.py](BachelorWork/Code/CNN_model/train.py)**  
+  Defines and trains a CNN with custom normalization layers (NormLayer).
+Problem solved: Learns to recognize 8-character license plates from synthetic data.
+- **[test.py](BachelorWork/Code/CNN_model/test.py)**  
+  Loads the trained model, runs predictions, and compares outputs with true labels.
+Problem solved: Evaluates recognition accuracy and decodes predicted license plates.
+- **[GW_Kim_Semyon.pdf](BachelorWork/GW_Kim_Semyon.pdf)**  
+  Full Bachelor thesis document.
+Problem solved: Provides academic background, methodology, and experimental results.
 
 ---
 
