@@ -14,7 +14,11 @@ Exercises range from **basic concepts** (perceptron, activation functions) to **
 - **basic/** → introductory exercises (perceptron, activation functions, gradient descent).  
 - **medium/** → intermediate topics (multi-layer networks, backpropagation, convolutional examples).  
 - **visualization/** → training curves, accuracy plots.  
-- **utils/** → helper functions for reuse.  
+- **utils/** → helper functions for reuse.
+- **PythonMLCourse/** → complete archive of the [SHARE](https://sharemsu.ru/) program’s Python & Machine Learning course.
+    - **Part1/** → 8 seminars + 2 competitions covering fundamentals: Python basics, data preprocessing, linear/logistic regression, decision trees, and early ML challenges.
+    - **Part2/** → 8 seminars (including 1 competition) focused on applied ML: feature engineering, ensemble methods, PyTorch models, image classification with augmentation, and advanced regression tasks.
+    - **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)** → consolidated notebook combining all seminars and competitions into one file for quick review.
 
 ---
 
@@ -30,7 +34,8 @@ Exercises range from **basic concepts** (perceptron, activation functions) to **
   *Problem solved:* Shows feature engineering and manual classification logic, achieving ~29% accuracy.
 
 ### Medium Level
-- **[iou_and_polygon_area.ipynb](medium/iou_and_polygon_area.ipynb)** Demonstrates geometric computations: Intersection over Union (IoU) between rectangles and polygon area calculation using Shapely.
+- **[iou_and_polygon_area.ipynb](medium/iou_and_polygon_area.ipynb)**  
+  Demonstrates geometric computations: Intersection over Union (IoU) between rectangles and polygon area calculation using Shapely.
 *Problem solved:* Introduces bounding box overlap metrics (IoU) widely used in computer vision, and shows how to compute polygon areas programmatically.
 - *(to be added: multi-layer networks, backpropagation, convolutional examples)*
 
@@ -39,6 +44,63 @@ Exercises range from **basic concepts** (perceptron, activation functions) to **
 
 ### Utilities
 - *(to be added: helper functions for reuse)*
+
+### PythonMLCourse ([SHARE](https://sharemsu.ru/) Program)
+
+#### Combined Notebook
+- **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)**
+  Consolidated notebook merging all seminars and competitions for quick review.
+
+#### Part1 — Fundamentals + Competitions
+- **Seminar01**
+    - Problem: Load and explore tabular dataset.
+    - Solution: Applied pandas for preprocessing and simple statistics.
+
+- **Seminar02**
+    - Problem: Implement Python functions for data manipulation.
+    - Solution: Wrote reusable functions and tested on sample inputs.
+
+- **Seminar03**
+    - Problem: Linear regression on numeric dataset.
+    - Solution: Used scikit-learn LinearRegression and plotted predictions.
+
+- **Seminar04**
+    - Problem: Binary classification task.
+    - Solution: Trained logistic regression and evaluated accuracy.
+
+- **Seminar05**
+    - Problem: Handle missing values and categorical features.
+    - Solution: Applied imputation and one-hot encoding.
+
+- **Seminar06**
+    - Problem: Decision tree modeling.
+    - Solution: Built DecisionTreeClassifier and visualized splits.
+
+- **Competition01**
+    - Problem: Predict categorical labels in a Kaggle-style challenge.
+    - Solution: Combined preprocessing + logistic regression baseline.
+
+- **Competition02**
+    - Problem: Regression competition with larger dataset.
+    - Solution: Used ensemble methods and tuned hyperparameters.
+
+- **Seminar07–08**
+    - Problem: More advanced ML tasks (feature engineering, evaluation).
+    - Solution: Applied RandomForest and gradient boosting models.
+
+#### Part2 — Applied ML & Advanced Topics
+
+- **Seminar01–06**
+    - Problem: Progressively harder ML exercises (classification, regression, visualization).
+    - Solution: Implemented models with scikit-learn and PyTorch, added plots for evaluation.
+
+- **Seminar07 (Competition)**
+    - Problem: Image classification competition with augmentation.
+    - Solution: Built CNN in PyTorch, added augmentation, tuned epochs.
+
+- **Seminar08**
+    - Problem: Regression with feature engineering.
+    - Solution: Applied ensemble methods and optimized performance.
 
 ---
 
