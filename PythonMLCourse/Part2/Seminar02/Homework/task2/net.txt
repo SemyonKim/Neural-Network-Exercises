@@ -1,0 +1,1 @@
+INPUT  -> conv(5x5, s=1, VALID) -> conv(1x1, s=2, SAME) -> conv(7x7, s=2, VALID) -> conv(3x3, s=1, SAME) -> conv(3x3, s=2, VALID)
