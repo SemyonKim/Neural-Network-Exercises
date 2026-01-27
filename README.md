@@ -24,12 +24,11 @@ This repository is an **archived collection** of selected works from my universi
     - **Part1/** → 8 seminars + 2 competitions covering fundamentals: Python basics, data preprocessing, linear/logistic regression, decision trees, and early ML challenges.
     - **Part2/** → 8 seminars (including 1 competition) focused on applied ML: feature engineering, ensemble methods, PyTorch models, image classification with augmentation, and advanced regression tasks.
     - **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)** → consolidated notebook combining all seminars and competitions into one file for quick review.
-- **BachelorWork/** → complete implementation of my Bachelor thesis project on synthetic license plate generation and recognition.
-    - **[create_train_data.py](BachelorWork/Code/Plate_Generator/create_train_data.py)** and **[genplate_advanced.py](BachelorWork/Code/Plate_Generator/genplate_advanced.py)** → synthetic license plate generator.
-    - **[PlateCommon.py](BachelorWork/Code/Plate_Generator/PlateCommon.py)** → image distortion functions (rotation, smudging, noise).
-    - **[train.py](BachelorWork/Code/CNN_model/train.py)** → CNN training pipeline with custom NormLayer.
-    - **[test.py](BachelorWork/Code/CNN_model/test.py)** → evaluation and prediction script.
-    - **[GW_Kim_Semyon.pdf](BachelorWork/GW_Kim_Semyon.pdf)** → full thesis document.
+- **OptimisationNN/** → Implementation of the project on synthetic license plate generation and recognition.
+    - **[generator.py](OptimisationNN/Plate_Generator/generator.py)** → synthetic license plate generator.
+    - **[augmenter.py](OptimisationNN/Plate_Generator/augmenter.py)** → image distortion functions (rotation, smudging, noise).
+    - **[train.py](OptimisationNN/CNN_model/train.py)** → CNN training pipeline with custom NormLayer.
+    - **[test.py](OptimisationNN/CNN_model/test.py)** → evaluation and prediction script.
 
 ---
 
@@ -113,22 +112,19 @@ This repository is an **archived collection** of selected works from my universi
     - Problem: Regression with feature engineering.
     - Solution: Applied ensemble methods and optimized performance.
  
-### 🎓 Bachelor Thesis Project
-- **[create_train_data.py](BachelorWork/Code/Plate_Generator/create_train_data.py)** and **[genplate_advanced.py](BachelorWork/Code/Plate_Generator/genplate_advanced.py)**  
-  Generates synthetic license plate images using PIL and OpenCV.
-Problem solved: Creates realistic training data for end-to-end recognition.
-- **[PlateCommon.py](BachelorWork/Code/Plate_Generator/PlateCommon.py)**  
-  Implements image transformations: rotation, smudging, Gaussian blur, and noise injection.
-Problem solved: Simulates real-world distortions to improve model robustness.
-- **[train.py](BachelorWork/Code/CNN_model/train.py)**  
-  Defines and trains a CNN with custom normalization layers (NormLayer).
-Problem solved: Learns to recognize 8-character license plates from synthetic data.
-- **[test.py](BachelorWork/Code/CNN_model/test.py)**  
-  Loads the trained model, runs predictions, and compares outputs with true labels.
-Problem solved: Evaluates recognition accuracy and decodes predicted license plates.
-- **[GW_Kim_Semyon.pdf](BachelorWork/GW_Kim_Semyon.pdf)**  
-  Full Bachelor thesis document.
-Problem solved: Provides academic background, methodology, and experimental results.
+### 🎓 Optimisation NN Project
+- **[generator.py](OptimisationNN/Plate_Generator/generator.py)**  
+  Generates synthetic license plate images using PIL and OpenCV.  
+  Problem solved: Creates realistic training data for end-to-end recognition.
+- **[augmenter.py](OptimisationNN/Plate_Generator/augmenter.py)**  
+  Implements image transformations: rotation, smudging, Gaussian blur, and noise injection.  
+  Problem solved: Simulates real-world distortions to improve model robustness.
+- **[train.py](OptimisationNN/CNN_model/train.py)**  
+  Defines and trains a CNN with custom normalization layers (NormLayer).  
+  Problem solved: Learns to recognize 8-character license plates from synthetic data.
+- **[test.py](OptimisationNN/CNN_model/test.py)**  
+  Loads the trained model, runs predictions, and compares outputs with true labels.  
+  Problem solved: Evaluates recognition accuracy and decodes predicted license plates.
 
 ---
 
