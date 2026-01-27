@@ -29,6 +29,9 @@ This repository is an **archived collection** of selected works from my universi
     - **[augmenter.py](OptimisationNN/Plate_Generator/augmenter.py)** → image distortion functions (rotation, smudging, noise).
     - **[train.py](OptimisationNN/CNN_model/train.py)** → CNN training pipeline with custom NormLayer.
     - **[test.py](OptimisationNN/CNN_model/test.py)** → evaluation and prediction script.
+- **ONE_KnowledgeDistillation/** → experiments inspired by Xu et al. (NeurIPS 2018).  
+  Based on the original [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018) repo, with my own modifications and parameter explorations.
+
 
 ---
 
@@ -125,6 +128,10 @@ This repository is an **archived collection** of selected works from my universi
 - **[test.py](OptimisationNN/CNN_model/test.py)**  
   Loads the trained model, runs predictions, and compares outputs with true labels.  
   Problem solved: Evaluates recognition accuracy and decodes predicted license plates.
+
+### 🔬 **Knowledge Distillation (ONE)** 
+- Experiments inspired by Xu et al. (NeurIPS 2018). Based on the original [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018) repo, with my own modifications and parameter explorations.
+
 
 ---
 
