@@ -11,8 +11,7 @@
 
 
 ## 📖 Overview
-This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**.  
-Exercises range from **basic concepts** (perceptron, activation functions) to **medium-level implementations** (multi-layer networks, backpropagation, convolutional examples).  
+This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**. I uploaded works as it is without refactoring the solution code. Exercises range from **basic concepts** (perceptron, activation functions) to **medium-level implementations** (multi-layer networks, backpropagation, convolutional examples).  
 
 ---
 
