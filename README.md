@@ -1,8 +1,14 @@
 # 🧠 Neural Network Exercises (University Coursework)
 
-![Status: Archived](https://img.shields.io/badge/Status-Academic%20Coursework-lightgrey?style=for-the-badge&logo=python)
+![Repo Size](https://img.shields.io/github/repo-size/SemyonKim/Neural-Network-Exercises?style=for-the-badge&logo=github)
+![Status](https://img.shields.io/badge/Status-lightgrey?style=for-the-badge&logo=python)
+![Academic Coursework](https://img.shields.io/badge/Academic%20Coursework-blue?style=for-the-badge)
+![Archived](https://img.shields.io/badge/Archived-red?style=for-the-badge)
 ![Language: Python](https://img.shields.io/badge/Language-Python-blue?style=for-the-badge&logo=python)
 ![Platform: Jupyter/Colab](https://img.shields.io/badge/Platform-Jupyter%20%2F%20Colab-orange?style=for-the-badge&logo=googlecolab)
+
+
+
 
 ## 📖 Overview
 This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**.  
