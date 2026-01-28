@@ -17,13 +17,13 @@ My theoretical contribution:
 
 ## 🧩 Evolution of Scripts
 - **Original Pair (Baseline + ONE)**
-  - **Baseline** (cifar_baseline_original.py):
+  - **Baseline** (`cifar_baseline_original.py`):
     - Standard CIFAR‑10/100 training loop.
     - Optimizer: plain SGD with fixed schedule.
     - Loss: cross‑entropy only.
     - Metrics: top‑1 accuracy only.
     - Logging: train/test loss + accuracy.
-  - **ONE** (cifar_one_original.py):
+  - **ONE** (`cifar_one_original.py`):
     - Implements Xu et al. ONE method.
     - Architecture: 3 branches + ensemble teacher.
     - Loss: cross‑entropy per branch + KL distillation loss from ensemble teacher.
@@ -31,13 +31,13 @@ My theoretical contribution:
     - Logging: branch accuracies + ensemble accuracy.
 
 - **First Modified Pair (“After LR”)**
-  - **Baseline** (cifar_baseline_afterLR.py):
+  - **Baseline** (`cifar_baseline_afterLR.py`):
     - Added GradientRatioScheduler for parameter‑specific learning rates.
     - Introduced geometric LR updates inside training loop.
     - Added flags: --geo-lr, --deterministic, --save-checkpoint-model.
     - Expanded logging: epoch, time, LR.
     - Still tracked top‑1 accuracy only.
-  - **ONE** (cifar_one_afterLR.py):
+  - **ONE** (`cifar_one_afterLR.py`):
     - Extended architecture: 3 → 5 branches + ensemble teacher.
     - Loss: cross‑entropy + KL distillation across all 5 branches, ensemble = branch 6.
     - Optimizer replaced with GradientRatioScheduler.
@@ -48,12 +48,12 @@ My theoretical contribution:
 This implements the scaling proof (S1 → S2, 3 → 5 branches). The custom LR scheduler stabilizes training of the larger cooperative network. Results confirmed ensemble accuracy ≥ smaller branch network, validating $`𝑝_2 ≥ 𝑝_1`$.
 
 - **Last Modified Pair (“With Top‑5 Before LR”)**
-  - **Baseline** (cifar_baseline_top5.py):
+  - **Baseline** (`cifar_baseline_top5.py`):
     - Added top‑5 accuracy tracking alongside top‑1.
     - Logging now includes both metrics before LR adjustments.
     - Retained standard optimizer (SGD) but gamma changed (0.333).
     - Extended evaluation metrics to validate broader classification performance.
-  - **ONE** (cifar_one_top5.py):
+  - **ONE** (`cifar_one_top5.py`):
     - Architecture: still 5 branches + ensemble.
     - Loss: cross‑entropy + KL distillation across all branches.
     - Metrics: top‑1 and top‑5 accuracy per branch + ensemble.
