@@ -1,6 +1,6 @@
 # Step1 — Two-stage training of a cooperative neural network
-Based on: Xu et al., *Knowledge Distillation On the Fly Native Ensemble (ONE)*, NeurIPS 2018.  
-Original implementation: [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018)
+- **Reference Article:** **[Xu et al. *Knowledge Distillation On the Fly Native Ensemble* (ONE) NeurIPS 2018.](https://arxiv.org/pdf/1806.04606)**  
+- **Original GitHub Repository:** [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018)
 
 ---
 
