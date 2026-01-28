@@ -132,12 +132,6 @@ We designed **four subgroups**, each testing a different merging or expansion st
 
 ---
 
-## ✅ Current Status
-- **Part1 completed:** All five subgroups implemented and documented.  
-- **Part2 completed:** All four subgroups implemented and documented.  
-
----
-
 ## 📝 Notes
 - All code is refactored for clarity and reproducibility.  
 - Checkpoints are organized under `checkpoints/cifar10/` and `checkpoints/cifar100/`.  
