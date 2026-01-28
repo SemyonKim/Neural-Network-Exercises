@@ -11,7 +11,14 @@
 
 
 ## 📖 Overview
-This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**. I uploaded works as it is without refactoring the solution code. Exercises range from **basic concepts** (perceptron, activation functions) to **medium-level implementations** (multi-layer networks, backpropagation, convolutional examples).  
+This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**.  
+Exercises range from **basic concepts** (perceptron, activation functions) to **medium-level implementations** (multi-layer networks, backpropagation, convolutional examples), and extend into **advanced cooperative learning experiments** inspired by [NeurIPS 2018](https://arxiv.org/pdf/1806.04606) research.  
+
+The archive includes: 
+- Introductory and intermediate coursework exercises.
+- A complete Python & Machine Learning course archive (SHARE program).
+- A synthetic license plate generation and recognition project.
+- **Knowledge Distillation with ONE (On-the-Fly Native Ensemble)** — my own experiments based on Xu et al. (NeurIPS 2018) [PDF](https://arxiv.org/pdf/1806.04606) and [github](https://github.com/Lan1991Xu/ONE_NeurIPS2018), refactored and extended into multi-branch cooperative neural networks.
 
 ---
 
@@ -29,9 +36,11 @@ This repository is an **archived collection** of selected works from my universi
     - **[augmenter.py](OptimisationNN/Plate_Generator/augmenter.py)** → image distortion functions (rotation, smudging, noise).
     - **[train.py](OptimisationNN/CNN_model/train.py)** → CNN training pipeline with custom NormLayer.
     - **[test.py](OptimisationNN/CNN_model/test.py)** → evaluation and prediction script.
-- **ONE_KnowledgeDistillation/** → experiments inspired by Xu et al. (NeurIPS 2018).  
-  Based on the original [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018) repo, with my own modifications and parameter explorations.
-
+- **ONE_KnowledgeDistillation/** → experiments inspired by [Xu et al. (NeurIPS 2018).](https://arxiv.org/pdf/1806.04606)  
+    - **TwoStageCooperativeNN/Step1/** → README and code for Step1 experiments (5 subgroups: baseline, 3‑branch, 5‑branch, voting, transfer 3→5).
+    - **TwoStageCooperativeNN/Step2/** → README and code for Step2 experiments (4 subgroups: merge baseline+branch models, merge three one‑branch models, expand single branch into 3, single branch inside cooperative model).
+        - **utils/** → helper functions (logging, accuracy, branch replacement, etc.).
+        - **CooperativeNeuralNetworks.ipynb** → Colab notebook where Part1 and Part2 experiments are executed.
 
 ---
 
@@ -129,9 +138,12 @@ This repository is an **archived collection** of selected works from my universi
   Loads the trained model, runs predictions, and compares outputs with true labels.  
   Problem solved: Evaluates recognition accuracy and decodes predicted license plates.
 
-### 🔬 **Knowledge Distillation (ONE)** 
-- Experiments inspired by Xu et al. (NeurIPS 2018). Based on the original [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018) repo, with my own modifications and parameter explorations.
-
+### 🔬 Knowledge Distillation (ONE)
+- Experiments inspired by [Xu et al. (NeurIPS 2018).](https://arxiv.org/pdf/1806.04606)  
+- Based on the original [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018) repo, with my own modifications and parameter explorations.  
+- **Step1:** 5 subgroups (baseline, 3‑branch, 5‑branch, voting, transfer 3→5).  
+- **Step2:** 4 subgroups (merge baseline+branch models, merge three one‑branch models, expand single branch into 3, single branch inside cooperative model).  
+- ⚠️ **Note:** This repository does **not** contain pretrained weights. Each viewer must train and generate their own checkpoints before running cooperative experiments.
 
 ---
 
@@ -140,7 +152,7 @@ This repository is an **archived collection** of selected works from my universi
 - Jupyter Notebook or Google Colaboratory  
 - Libraries:
    - Core: `numpy`, `matplotlib`
-   - ML/NN: `scikit-learn`, `tensorflow`
+   - ML/NN: `scikit-learn`, `tensorflow`, `torch`, `torchvision`
 
 > ⚠️ **Note**: These notebooks were created during university coursework. Dependencies may vary between files, and not all notebooks have been tested recently.
 
