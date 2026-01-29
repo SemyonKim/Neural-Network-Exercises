@@ -19,6 +19,7 @@ The archive includes:
 - A complete Python & Machine Learning course archive (SHARE program).
 - A synthetic license plate generation and recognition project.
 - **Knowledge Distillation with ONE (On-the-Fly Native Ensemble)** — my own experiments based on Xu et al. (NeurIPS 2018) [PDF](https://arxiv.org/pdf/1806.04606) and [github](https://github.com/Lan1991Xu/ONE_NeurIPS2018), refactored and extended into multi-branch cooperative neural networks.
+- A **Digital Marketing block** combining classic and neural network approaches for clustering, classification, and regression tasks.
 
 ---
 
@@ -41,6 +42,10 @@ The archive includes:
     - **TwoStageCooperativeNN/Step2/** → README and code for Step2 experiments (4 subgroups: merge baseline+branch models, merge three one‑branch models, expand single branch into 3, single branch inside cooperative model).
         - **utils/** → helper functions (logging, accuracy, branch replacement, etc.).
         - **CooperativeNeuralNetworks.ipynb** → Colab notebook where Part1 and Part2 experiments are executed.
+- **DigitalMarketing/** → completed Digital Marketing course notebooks:
+  - **Sales_Stores/** → store performance and sales prediction.
+  - **TimeSeries_PanelData/** → time series and panel data modeling.
+  - **Analysis_Combined/** → unified notebook combining clustering, classification, and regression (classic + neural).
 
 ---
 
@@ -59,7 +64,6 @@ The archive includes:
 - **[iou_and_polygon_area.ipynb](medium/iou_and_polygon_area.ipynb)**  
   Demonstrates geometric computations: Intersection over Union (IoU) between rectangles and polygon area calculation using Shapely.
 *Problem solved:* Introduces bounding box overlap metrics (IoU) widely used in computer vision, and shows how to compute polygon areas programmatically.
-- *(to be added: multi-layer networks, backpropagation, convolutional examples)*
 
 ### 📊 Visualization
 - *(to be added: training curves, accuracy plots)*
@@ -68,91 +72,38 @@ The archive includes:
 - *(to be added: helper functions for reuse)*
 
 ### 📘 PythonMLCourse ([SHARE](https://sharemsu.ru/) Program)
-
-#### Combined Notebook
-- **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)**
-  Consolidated notebook merging all seminars and competitions for quick review.
-
-#### Part1 — Fundamentals + Competitions
-- **Seminar01**
-    - Problem: Load and explore tabular dataset.
-    - Solution: Applied pandas for preprocessing and simple statistics.
-
-- **Seminar02**
-    - Problem: Implement Python functions for data manipulation.
-    - Solution: Wrote reusable functions and tested on sample inputs.
-
-- **Seminar03**
-    - Problem: Linear regression on numeric dataset.
-    - Solution: Used scikit-learn LinearRegression and plotted predictions.
-
-- **Seminar04**
-    - Problem: Binary classification task.
-    - Solution: Trained logistic regression and evaluated accuracy.
-
-- **Seminar05**
-    - Problem: Handle missing values and categorical features.
-    - Solution: Applied imputation and one-hot encoding.
-
-- **Seminar06**
-    - Problem: Decision tree modeling.
-    - Solution: Built DecisionTreeClassifier and visualized splits.
-
-- **Competition01**
-    - Problem: Predict categorical labels in a Kaggle-style challenge.
-    - Solution: Combined preprocessing + logistic regression baseline.
-
-- **Competition02**
-    - Problem: Regression competition with larger dataset.
-    - Solution: Used ensemble methods and tuned hyperparameters.
-
-- **Seminar07–08**
-    - Problem: More advanced ML tasks (feature engineering, evaluation).
-    - Solution: Applied RandomForest and gradient boosting models.
-
-#### Part2 — Applied ML & Advanced Topics
-
-- **Seminar01–06**
-    - Problem: Progressively harder ML exercises (classification, regression, visualization).
-    - Solution: Implemented models with scikit-learn and PyTorch, added plots for evaluation.
-
-- **Seminar07 (Competition)**
-    - Problem: Image classification competition with augmentation.
-    - Solution: Built CNN in PyTorch, added augmentation, tuned epochs.
-
-- **Seminar08**
-    - Problem: Regression with feature engineering.
-    - Solution: Applied ensemble methods and optimized performance.
+- **Part1/** → Fundamentals + competitions (linear/logistic regression, decision trees, preprocessing, Kaggle-style challenges).  
+- **Part2/** → Applied ML & advanced topics (feature engineering, ensembles, PyTorch CNNs, image classification, regression).  
+- **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)** → consolidated notebook merging all seminars and competitions.
  
 ### 🎓 Optimisation NN Project
-- **[generator.py](OptimisationNN/Plate_Generator/generator.py)**  
-  Generates synthetic license plate images using PIL and OpenCV.  
-  Problem solved: Creates realistic training data for end-to-end recognition.
-- **[augmenter.py](OptimisationNN/Plate_Generator/augmenter.py)**  
-  Implements image transformations: rotation, smudging, Gaussian blur, and noise injection.  
-  Problem solved: Simulates real-world distortions to improve model robustness.
-- **[train.py](OptimisationNN/CNN_model/train.py)**  
-  Defines and trains a CNN with custom normalization layers (NormLayer).  
-  Problem solved: Learns to recognize 8-character license plates from synthetic data.
-- **[test.py](OptimisationNN/CNN_model/test.py)**  
-  Loads the trained model, runs predictions, and compares outputs with true labels.  
-  Problem solved: Evaluates recognition accuracy and decodes predicted license plates.
+- **[generator.py](OptimisationNN/Plate_Generator/generator.py)** → synthetic license plate generator.  
+- **[augmenter.py](OptimisationNN/Plate_Generator/augmenter.py)**   → image distortion functions (rotation, smudging, noise).  
+- **[train.py](OptimisationNN/CNN_model/train.py)** → CNN training pipeline with custom NormLayer.  
+- **[test.py](OptimisationNN/CNN_model/test.py)**  → evaluation and prediction script.
 
 ### 🔬 Knowledge Distillation (ONE)
 - Experiments inspired by [Xu et al. (NeurIPS 2018).](https://arxiv.org/pdf/1806.04606)  
 - Based on the original [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018) repo, with my own modifications and parameter explorations.  
 - **Step1:** 5 subgroups (baseline, 3‑branch, 5‑branch, voting, transfer 3→5).  
 - **Step2:** 4 subgroups (merge baseline+branch models, merge three one‑branch models, expand single branch into 3, single branch inside cooperative model).  
-- ⚠️ **Note:** This repository does **not** contain pretrained weights. Each viewer must train and generate their own checkpoints before running cooperative experiments.
+> ⚠️ **Note:** No pretrained weights included — viewers must train their own checkpoints.
+
+### 📈 Digital Marketing Block 
+- **Sales_Stores/** → sales and store performance analysis (classification, regression).
+- **TimeSeries_PanelData/** → combined solutions for time series and panel data (ARIMA, LSTM, RNN, PooledOLS).
+- **Analysis_Combined/** → unified notebook integrating clustering, classification, and regression with both classical and neural methods.
+- *Highlights:* Balanced integration of classical and neural approaches, reproducible workflows, professional documentation. 
 
 ---
 
 ## ⚙️ Requirements
-- Python 3.x  
-- Jupyter Notebook or Google Colaboratory  
+- Python 3.x
+- Jupyter Notebook or Google Colaboratory
 - Libraries:
-   - Core: `numpy`, `matplotlib`
-   - ML/NN: `scikit-learn`, `tensorflow`, `torch`, `torchvision`
+    - Core: `numpy`, `pandas`, `matplotlib`, `seaborn`
+    - ML/NN: `scikit-learn`, `statsmodels`, `tensorflow`, `torch`, `torchvision`
+    - SOM libraries: `SimpSOM`, `MiniSom`
 
 > ⚠️ **Note**: These notebooks were created during university coursework. Dependencies may vary between files, and not all notebooks have been tested recently.
 
@@ -168,7 +119,6 @@ The archive includes:
 ## 📌 Notes
 - This project is an **academic exercise archive**.
 - It is **not actively maintained**, but preserved for reference and learning.
-- Future updates may include documentation of my **Bachelor/Master thesis experiments**.
 
 ---
 
