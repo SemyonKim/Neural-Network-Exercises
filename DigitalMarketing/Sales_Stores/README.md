@@ -72,3 +72,8 @@ jupyter notebook DM_Marketing_Analysis.ipynb
 * All file paths are placeholders; replace them with actual dataset locations if you wish to rerun the analysis.
 * Markdown explanations and inline comments have been added for clarity.
 * The notebook demonstrates **workflow structure and analysis methodology**, not production‑ready modeling.
+
+---
+
+## License
+This project is released under the MIT License. See [LICENSE](https://github.com/SemyonKim/Neural-Network-Exercises/blob/main/LICENSE) for details.
