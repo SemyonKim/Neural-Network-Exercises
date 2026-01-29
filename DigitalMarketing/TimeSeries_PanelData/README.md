@@ -80,3 +80,8 @@ DigitalMarketing/
 
 ## 🎯 Purpose
 This notebook serves as a **practice archive** for combining econometric and machine learning approaches to time series and panel data. It is part of the Neural-Network-Exercises (github.com in Bing) repository under the **DigitalMarketing** section.
+
+---
+
+## License
+This project is released under the MIT License. See [LICENSE](https://github.com/SemyonKim/Neural-Network-Exercises/blob/main/LICENSE) for details.
