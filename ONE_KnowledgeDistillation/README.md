@@ -51,6 +51,11 @@ This folder contains two major stages:
   [Paper PDF](https://arxiv.org/pdf/1806.04606)  
   [Original GitHub Repository](https://github.com/Lan1991Xu/ONE_NeurIPS2018)
 
+---
+
+## License
+This project is released under the MIT License. See [LICENSE](https://github.com/SemyonKim/Neural-Network-Exercises/blob/main/LICENSE) for details.
+
 - The original codebase belongs to [Lan1991Xu](https://github.com/Lan1991Xu).  
 - This folder contains **my own experiments and modifications**.  
 - Please refer to the original repository for the full implementation details.
