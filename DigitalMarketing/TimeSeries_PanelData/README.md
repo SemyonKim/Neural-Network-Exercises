@@ -8,7 +8,6 @@ This project demonstrates forecasting and econometric modeling using both **time
 DigitalMarketing/
 └── TimeSeries_PanelData/
     ├── TimeSeries_PanelData.ipynb   # Main notebook
-    ├── data/                        # Input datasets (Alcohol Sales, Stores, Features, Sales)
     └── README.md                    # Documentation
 ```
 
@@ -85,3 +84,4 @@ This notebook serves as a **practice archive** for combining econometric and mac
 
 ## License
 This project is released under the MIT License. See [LICENSE](https://github.com/SemyonKim/Neural-Network-Exercises/blob/main/LICENSE) for details.
+
