@@ -8,6 +8,7 @@ This project demonstrates forecasting and econometric modeling using both **time
 DigitalMarketing/
 └── TimeSeries_PanelData/
     ├── TimeSeries_PanelData.ipynb   # Main notebook
+    ├── data/                        # Input datasets (Alcohol Sales, Stores, Features, Sales)
     └── README.md                    # Documentation
 ```
 
