@@ -1,70 +1,69 @@
-import numpy as np
-import pickle
-from keras.layers import Dense, Input, BatchNormalization, Conv2D, Flatten, MaxPooling2D, Activation, Reshape, Layer, Lambda
-from keras.models import Model
-from keras.callbacks import TensorBoard, ModelCheckpoint, LearningRateScheduler
-from keras.optimizers import RMSprop
-from keras import backend as K
-import tensorflow as tf
-import keras.backend.tensorflow_backend as KTF
 import os
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.layers import (
+    Dense, Input, BatchNormalization, Conv2D, MaxPooling2D,
+    Activation, Reshape, Layer
+)
+from tensorflow.keras.models import Model
+from tensorflow.keras.callbacks import LearningRateScheduler
+from tensorflow.keras.optimizers import RMSprop
+from tensorflow.keras import backend as K
 
-# Use GPU device 0
+# Force GPU device 0
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 # Configure TensorFlow session to allow dynamic GPU memory growth
-def get_session():
-    config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True
-    return tf.Session(config=config)
+def configure_gpu():
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    if gpus:
+        try:
+            for gpu in gpus:
+                tf.config.experimental.set_memory_growth(gpu, True)
+        except RuntimeError as e:
+            print(e)
 
-# Custom layer for normalization
+configure_gpu()
+
+
+# Custom normalization layer
 class NormLayer(Layer):
     def __init__(self, **kwargs):
-        super(NormLayer, self).__init__(**kwargs)
+        super().__init__(**kwargs)
 
     def build(self, input_shape):
-        self.kernal = self.add_weight(
+        self.kernel = self.add_weight(
             name='NormLayer',
-            shape=(1, 15),
+            shape=(1, input_shape[-1]),
             initializer='ones',
             trainable=True
         )
-        super(NormLayer, self).build(input_shape)
+        super().build(input_shape)
 
     def call(self, inputs):
-	print(inputs.shape)
-        out = K.dot(self.kernal, inputs)
+        out = K.dot(self.kernel, inputs)
         out = K.permute_dimensions(out, (1, 0, 2))
-        print(out.shape)
         return out[:, 0, :]
 
     def compute_output_shape(self, input_shape):
         return (input_shape[0], input_shape[2])
 
-    def get_config(self):
-        base_config = super(NormLayer, self).get_config()
-        return dict(list(base_config.items()))
-
-# Updated TensorFlow session config (for TF 2.x compatibility)
-def get_session():
-    config = tf.compat.v1.ConfigProto()
-    config.gpu_options.allow_growth = True
-    return tf.compat.v1.Session(config=config)
 
 # Training class for end-to-end license plate recognition
-class train_e2e:
+class TrainE2E:
     def __init__(self):
         self.first_num = 13       # Number of classes for first character (letters)
         self.other_num = 10       # Number of classes for digits
         self.shape = (140, 30, 3) # Input image shape
         self.init_lr = 0.01       # Initial learning rate
+        self.model = None
 
     def load_data(self):
+        # Load labels
         label_path = './label.txt'
         self.tem_label = np.loadtxt(label_path)
 
-        row, col = self.tem_label.shape
+        row, _ = self.tem_label.shape
         self.label1 = np.zeros([row, self.first_num])
         self.label2 = np.zeros([row, self.other_num])
         self.label3 = np.zeros([row, self.other_num])
@@ -84,20 +83,19 @@ class train_e2e:
             self.label7[i, int(self.tem_label[i, 6]) - 13] = 1
             self.label8[i, int(self.tem_label[i, 7]) - 13] = 1
 
+        # Load images
         img_path = './train_data.pkl'
         self.img_data = np.load(img_path, allow_pickle=True)
         self.img_data = self.img_data.transpose(0, 2, 1, 3)
 
-    def step_decay(self, epoch):
+    def step_decay(self, epoch, lr):
         if epoch % 2 == 0 and epoch != 0:
-            lr = K.get_value(self.model.optimizer.lr)
-            K.set_value(self.model.optimizer.lr, lr * 0.5)
-            print("lr changed to {}".format(lr * 0.5))
-        return K.get_value(self.model.optimizer.lr)
+            new_lr = lr * 0.5
+            print(f"Learning rate changed to {new_lr}")
+            return new_lr
+        return lr
 
     def __build_network(self):
-        tf.compat.v1.keras.backend.set_session(get_session())
-
         input_img = Input(shape=self.shape)
         base_conv = 32
         x = input_img
@@ -129,35 +127,24 @@ class train_e2e:
         other_subject = Reshape((-1, self.other_num))(other_subject)
 
         # NormLayer branches
-        x1 = NormLayer()(first_subject)
-        x2 = NormLayer()(other_subject)
-        x3 = NormLayer()(first_subject)
-        x4 = NormLayer()(other_subject)
-        x5 = NormLayer()(first_subject)
-        x6 = NormLayer()(first_subject)
-        x7 = NormLayer()(other_subject)
-        x8 = NormLayer()(other_subject)
-
-        # Final outputs
-        out1 = Activation('softmax', name='out1')(x1)
-        out2 = Activation('softmax', name='out2')(x2)
-        out3 = Activation('softmax', name='out3')(x3)
-        out4 = Activation('softmax', name='out4')(x4)
-        out5 = Activation('softmax', name='out5')(x5)
-        out6 = Activation('softmax', name='out6')(x6)
-        out7 = Activation('softmax', name='out7')(x7)
-        out8 = Activation('softmax', name='out8')(x8)
+        outputs = [
+            Activation('softmax', name=f'out{i+1}')(NormLayer()(branch))
+            for i, branch in enumerate([
+                first_subject, other_subject, first_subject, other_subject,
+                first_subject, first_subject, other_subject, other_subject
+            ])
+        ]
 
         # Compile model
-        rmsprop = RMSprop(lr=self.init_lr)
-        self.model = Model(input_img, [out1, out2, out3, out4, out5, out6, out7, out8])
+        rmsprop = RMSprop(learning_rate=self.init_lr)
+        self.model = Model(input_img, outputs)
         self.model.compile(
             loss=['categorical_crossentropy'] * 8,
             optimizer=rmsprop,
             metrics=['accuracy'],
             loss_weights=[1] * 8
         )
-        print(self.model.summary())
+        self.model.summary()
 
     def train(self):
         self.__build_network()
@@ -174,7 +161,8 @@ class train_e2e:
         )
         self.model.save("e2e_model.h5")
 
+
 if __name__ == "__main__":
-    my_train_nn = train_e2e()
-    my_train_nn.load_data()
-    my_train_nn.train()
+    trainer = TrainE2E()
+    trainer.load_data()
+    trainer.train()
