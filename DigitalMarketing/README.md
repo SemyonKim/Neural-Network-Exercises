@@ -50,3 +50,8 @@ Install missing packages with:
 pip install -r requirements.txt
 ```
   > Note: A viewer must create their own requirements.txt file.
+
+---
+
+## License
+This project is released under the MIT License. See [LICENSE](https://github.com/SemyonKim/Neural-Network-Exercises/blob/main/LICENSE) for details.
