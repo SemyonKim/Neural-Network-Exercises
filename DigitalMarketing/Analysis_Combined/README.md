@@ -81,4 +81,5 @@ This notebook is part of the **Neural Network Exercises** archive curated by [Se
 ---
 
 ## License
-This project is released under the MIT License. See [MIT](https://github.com/SemyonKim/Neural-Network-Exercises/blob/main/LICENSE) for details.
+This project is released under the MIT License. See [LICENSE](https://github.com/SemyonKim/Neural-Network-Exercises/blob/main/LICENSE) for details.
+
