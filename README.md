@@ -22,8 +22,6 @@ Finally, the **NumericalMethods** folder contains my coursework on Optimisations
 ## 📂 Structure
 - **basic/** → introductory exercises (perceptron, activation functions, gradient descent).  
 - **medium/** → intermediate topics (multi-layer networks, backpropagation, convolutional examples).  
-- **visualization/** → training curves, accuracy plots.  
-- **utils/** → helper functions for reuse.
 - **PythonMLCourse/** → complete archive of the [SHARE](https://sharemsu.ru/) program’s Python & Machine Learning course.
 - **OptimisationNN/** → synthetic license plate generation and recognition project.
 - **ONE_KnowledgeDistillation/** → cooperative learning experiments inspired by [Xu et al. (NeurIPS 2018).](https://arxiv.org/pdf/1806.04606)  
