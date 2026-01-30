@@ -11,8 +11,12 @@
 
 
 ## 📖 Overview
-This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**.  
-Exercises range from **basic concepts** (perceptron, activation functions) to **medium-level implementations** (multi-layer networks, backpropagation, convolutional examples), and extend into **advanced cooperative learning experiments** inspired by [NeurIPS 2018](https://arxiv.org/pdf/1806.04606) research.  
+This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**.
+
+Exercises range from:
+- **basic concepts** (perceptron, activation functions, gradient descent, simple digit recognition baselines),  
+- to **medium-level implementations** (multi-layer networks, backpropagation, convolutional examples, geometric computations such as IoU and polygon area),  
+- and extend into **advanced cooperative learning experiments** inspired by [NeurIPS 2018](https://arxiv.org/pdf/1806.04606) research. 
 
 It also includes a dedicated block on **Digital Marketing analytics**, a project on **synthetic license plate generation and recognition**, and a full archive of the **Python & Machine Learning [SHARE](https://sharemsu.ru/) program**.
 Finally, the **NumericalMethods** folder contains my coursework on Optimisations and Numerical Methods, covering regression, dimensionality reduction, integration, and optimization techniques.
@@ -20,8 +24,8 @@ Finally, the **NumericalMethods** folder contains my coursework on Optimisations
 ---
 
 ## 📂 Structure
-- **basic/** → introductory exercises (perceptron, activation functions, gradient descent).  
-- **medium/** → intermediate topics (multi-layer networks, backpropagation, convolutional examples).  
+- **basic/** → introductory exercises (perceptron, activation functions, gradient descent, simple digit recognition).  
+- **medium/** → intermediate topics (multi-layer networks, backpropagation, convolutional examples, IoU metric, polygon area).  
 - **PythonMLCourse/** → complete archive of the [SHARE](https://sharemsu.ru/) program’s Python & Machine Learning course.
 - **OptimisationNN/** → synthetic license plate generation and recognition project.
 - **ONE_KnowledgeDistillation/** → cooperative learning experiments inspired by [Xu et al. (NeurIPS 2018).](https://arxiv.org/pdf/1806.04606)  
@@ -35,10 +39,15 @@ Finally, the **NumericalMethods** folder contains my coursework on Optimisations
 ### 🟢 Basic Level
 - Perceptron, activation functions, gradient descent.
 - Simple digit recognition baselines.
+- Introductory notebooks demonstrating fundamental neural network concepts.
 
 ### 🟡 Medium Level
-- Multi-layer networks, backpropagation, convolutional examples.
-- Geometric computations (IoU, polygon area).
+- Multi-layer networks (Tasks 1–7 in `Introduction_to_Keras_Lab.ipynb`).  
+- Backpropagation and training dynamics.  
+- Convolutional examples (single-layer CNN).  
+- Geometric computations:
+  - **IoU_Rectangle.ipynb** → Intersection over Union for rectangles.  
+  - Polygon area calculations.  
 
 ### 📘 PythonMLCourse ([SHARE](https://sharemsu.ru/) Program)
 - **Part1/** → Fundamentals + competitions (linear/logistic regression, decision trees, preprocessing, Kaggle-style challenges).  
@@ -81,6 +90,7 @@ Finally, the **NumericalMethods** folder contains my coursework on Optimisations
     - SOM libraries: `SimpSOM`, `MiniSom`
     - Image processing: `imageio`
     - Numerical methods: `scipy`, `numdifftools`
+    - Geometry tasks (IoU, polygon area): `shapely` (optional, for polygon operations)
 
 > ⚠️ **Note**: These notebooks were created during university coursework. Dependencies may vary between files, and not all notebooks have been tested recently.
 
