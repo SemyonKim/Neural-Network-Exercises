@@ -14,12 +14,8 @@
 This repository is an **archived collection** of selected works from my university coursework in neural networks, implemented in **Python notebooks**.  
 Exercises range from **basic concepts** (perceptron, activation functions) to **medium-level implementations** (multi-layer networks, backpropagation, convolutional examples), and extend into **advanced cooperative learning experiments** inspired by [NeurIPS 2018](https://arxiv.org/pdf/1806.04606) research.  
 
-The archive includes: 
-- Introductory and intermediate coursework exercises.
-- A complete Python & Machine Learning course archive (SHARE program).
-- A synthetic license plate generation and recognition project.
-- **Knowledge Distillation with ONE (On-the-Fly Native Ensemble)** — my own experiments based on Xu et al. (NeurIPS 2018) [PDF](https://arxiv.org/pdf/1806.04606) and [github](https://github.com/Lan1991Xu/ONE_NeurIPS2018), refactored and extended into multi-branch cooperative neural networks.
-- A **Digital Marketing block** combining classic and neural network approaches for clustering, classification, and regression tasks.
+It also includes a dedicated block on **Digital Marketing analytics**, a project on **synthetic license plate generation and recognition**, and a full archive of the **Python & Machine Learning [SHARE](https://sharemsu.ru/) program**.
+Finally, the **NumericalMethods** folder contains my coursework on Optimisations and Numerical Methods, covering regression, dimensionality reduction, integration, and optimization techniques.
 
 ---
 
@@ -29,47 +25,22 @@ The archive includes:
 - **visualization/** → training curves, accuracy plots.  
 - **utils/** → helper functions for reuse.
 - **PythonMLCourse/** → complete archive of the [SHARE](https://sharemsu.ru/) program’s Python & Machine Learning course.
-    - **Part1/** → 8 seminars + 2 competitions covering fundamentals: Python basics, data preprocessing, linear/logistic regression, decision trees, and early ML challenges.
-    - **Part2/** → 8 seminars (including 1 competition) focused on applied ML: feature engineering, ensemble methods, PyTorch models, image classification with augmentation, and advanced regression tasks.
-    - **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)** → consolidated notebook combining all seminars and competitions into one file for quick review.
-- **OptimisationNN/** → Implementation of the project on synthetic license plate generation and recognition.
-    - **[generator.py](OptimisationNN/Plate_Generator/generator.py)** → synthetic license plate generator.
-    - **[augmenter.py](OptimisationNN/Plate_Generator/augmenter.py)** → image distortion functions (rotation, smudging, noise).
-    - **[train.py](OptimisationNN/CNN_model/train.py)** → CNN training pipeline with custom NormLayer.
-    - **[test.py](OptimisationNN/CNN_model/test.py)** → evaluation and prediction script.
-- **ONE_KnowledgeDistillation/** → experiments inspired by [Xu et al. (NeurIPS 2018).](https://arxiv.org/pdf/1806.04606)  
-    - **TwoStageCooperativeNN/Step1/** → README and code for Step1 experiments (5 subgroups: baseline, 3‑branch, 5‑branch, voting, transfer 3→5).
-    - **TwoStageCooperativeNN/Step2/** → README and code for Step2 experiments (4 subgroups: merge baseline+branch models, merge three one‑branch models, expand single branch into 3, single branch inside cooperative model).
-        - **utils/** → helper functions (logging, accuracy, branch replacement, etc.).
-        - **CooperativeNeuralNetworks.ipynb** → Colab notebook where Part1 and Part2 experiments are executed.
-- **DigitalMarketing/** → completed Digital Marketing course notebooks:
-  - **Sales_Stores/** → store performance and sales prediction.
-  - **TimeSeries_PanelData/** → time series and panel data modeling.
-  - **Analysis_Combined/** → unified notebook combining clustering, classification, and regression (classic + neural).
+- **OptimisationNN/** → synthetic license plate generation and recognition project.
+- **ONE_KnowledgeDistillation/** → cooperative learning experiments inspired by [Xu et al. (NeurIPS 2018).](https://arxiv.org/pdf/1806.04606)  
+- **DigitalMarketing/** → notebooks combining classical and neural approaches for clustering, classification, regression, and time series.
+- **NumericalMethods/** → coursework on Optimisations and Numerical Methods (14 homework tasks, documented in `NumericalMethods.ipynb`).
 
 ---
 
 ## 📂 Contents
 
 ### 🟢 Basic Level
-- **[digit_recognition_constant.ipynb](basic/digit_recognition_constant.ipynb)**  
-  Trivial baseline classifier that always predicts the same digit.  
-  *Problem solved:* Demonstrates dataset loading and evaluation pipeline, even though accuracy is ~10%.
-
-- **[digit_recognition_quadrant.ipynb](basic/digit_recognition_quadrant.ipynb)**  
-  Rule-based classifier dividing digit images into quadrants and comparing pixel counts.  
-  *Problem solved:* Shows feature engineering and manual classification logic, achieving ~29% accuracy.
+- Perceptron, activation functions, gradient descent.
+- Simple digit recognition baselines.
 
 ### 🟡 Medium Level
-- **[iou_and_polygon_area.ipynb](medium/iou_and_polygon_area.ipynb)**  
-  Demonstrates geometric computations: Intersection over Union (IoU) between rectangles and polygon area calculation using Shapely.
-*Problem solved:* Introduces bounding box overlap metrics (IoU) widely used in computer vision, and shows how to compute polygon areas programmatically.
-
-### 📊 Visualization
-- *(to be added: training curves, accuracy plots)*
-
-### 🛠️ Utilities
-- *(to be added: helper functions for reuse)*
+- Multi-layer networks, backpropagation, convolutional examples.
+- Geometric computations (IoU, polygon area).
 
 ### 📘 PythonMLCourse ([SHARE](https://sharemsu.ru/) Program)
 - **Part1/** → Fundamentals + competitions (linear/logistic regression, decision trees, preprocessing, Kaggle-style challenges).  
@@ -77,23 +48,29 @@ The archive includes:
 - **[PythonMLCourse.ipynb](PythonMLCourse/PythonMLCourse.ipynb)** → consolidated notebook merging all seminars and competitions.
  
 ### 🎓 Optimisation NN Project
-- **[generator.py](OptimisationNN/Plate_Generator/generator.py)** → synthetic license plate generator.  
-- **[augmenter.py](OptimisationNN/Plate_Generator/augmenter.py)**   → image distortion functions (rotation, smudging, noise).  
-- **[train.py](OptimisationNN/CNN_model/train.py)** → CNN training pipeline with custom NormLayer.  
-- **[test.py](OptimisationNN/CNN_model/test.py)**  → evaluation and prediction script.
+- Synthetic license plate generator, augmentation, CNN training pipeline, evaluation scripts.
 
 ### 🔬 Knowledge Distillation (ONE)
-- Experiments inspired by [Xu et al. (NeurIPS 2018).](https://arxiv.org/pdf/1806.04606)  
-- Based on the original [Lan1991Xu/ONE_NeurIPS2018](https://github.com/Lan1991Xu/ONE_NeurIPS2018) repo, with my own modifications and parameter explorations.  
-- **Step1:** 5 subgroups (baseline, 3‑branch, 5‑branch, voting, transfer 3→5).  
-- **Step2:** 4 subgroups (merge baseline+branch models, merge three one‑branch models, expand single branch into 3, single branch inside cooperative model).  
-> ⚠️ **Note:** No pretrained weights included — viewers must train their own checkpoints.
+- Cooperative neural network experiments (Step1 and Step2).
+- Based on Xu et al. (NeurIPS 2018) ([PDF](https://arxiv.org/pdf/1806.04606), [github](https://github.com/Lan1991Xu/ONE_NeurIPS2018)), extended with my own modifications.
 
 ### 📈 Digital Marketing Block 
 - **Sales_Stores/** → sales and store performance analysis (classification, regression).
 - **TimeSeries_PanelData/** → combined solutions for time series and panel data (ARIMA, LSTM, RNN, PooledOLS).
 - **Analysis_Combined/** → unified notebook integrating clustering, classification, and regression with both classical and neural methods.
-- *Highlights:* Balanced integration of classical and neural approaches, reproducible workflows, professional documentation. 
+- *Highlights:* Balanced integration of classical and neural approaches, reproducible workflows, professional documentation.
+
+### 🔢 Numerical Methods Coursework
+- **NumericalMethods/** → archive of 14 homework tasks from my university course on Optimisations and Numerical Methods.
+- [NumericalMethods.ipynb](NumericalMethods/NumericalMethods.ipynb) → consolidated notebook
+- Topics covered:
+    - Dimensionality reduction (PCA, LDA, ICA, t‑SNE, Isomap).
+    - Regression and robust fitting (Polynomial regression, RANSAC, orbit fitting).
+    - Integration and ODEs (Euler method, Monte Carlo).
+    - Optimization methods (Gradient Descent, Nelder–Mead, Coordinate Descent, Conjugate Gradient, Fletcher–Reeves).
+    - Image processing (Hybrid images via FFT, low‑light reconstruction, SVD compression).
+
+> ⚠️ Note: No input data files are included. All datasets are publicly available (e.g., via scikit-learn or open repositories). For image tasks, substitute with public datasets or your own images.
 
 ---
 
@@ -104,6 +81,8 @@ The archive includes:
     - Core: `numpy`, `pandas`, `matplotlib`, `seaborn`
     - ML/NN: `scikit-learn`, `statsmodels`, `tensorflow`, `torch`, `torchvision`
     - SOM libraries: `SimpSOM`, `MiniSom`
+    - Image processing: `imageio`
+    - Numerical methods: `scipy`, `numdifftools`
 
 > ⚠️ **Note**: These notebooks were created during university coursework. Dependencies may vary between files, and not all notebooks have been tested recently.
 
